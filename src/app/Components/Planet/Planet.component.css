@@ -1,0 +1,26 @@
+.planet{
+  position: absolute;
+  z-index: 5;
+  color: white;
+  font-size: 36px;
+  width: 98%;
+  text-align: center;
+  margin-top: 110px;
+}
+.people{
+  margin-top: 50px;
+}
+.buttonFilter{
+  color: white;
+  font-size: 24px;
+  margin-right: 10px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.buttonFilter:hover{
+  text-shadow: lightblue 2px 0 10px;
+}
+

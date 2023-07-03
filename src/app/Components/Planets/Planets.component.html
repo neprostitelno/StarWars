@@ -1,0 +1,16 @@
+<div *ngIf = 'planets' class="planets">
+  <div *ngFor='let planet of planets.results; let i = index;'>
+    <div>
+      <a class="center" [routerLink]="['/planets', i+1]" >{{planets.results[i].name}}&nbsp;<div class="info">({{planets.results[i].climate}})</div></a>
+    </div>
+  </div>
+</div>
+<div *ngIf = '!planets' class="planets">
+  <img src = './assets/preloader.svg' alt="">
+</div>
+
+<div class="buttons">
+  <div *ngFor='let page of this.pages'>
+    <button class="downloadMore" (click)="this.getPlanetsPage(page)">{{page}}</button>
+  </div>
+</div>

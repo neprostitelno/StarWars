@@ -1,27 +1,38 @@
 # StarWars
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Проект разработан на Angular версии 16.1.0.
 
-## Development server
+## О проекте
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Данный проект представляет собой клиентскую часть информационного сайта
+о планетах и их жителей. Так же имеется фильтр.
 
-## Code scaffolding
+## Задание
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Нужно написать одностраничное приложение (SPA) для просмотра информации о персонажах «звездных войн» с помощью API   https://swapi.dev/ .
 
-## Build
+При открытии приложения, должен отображаться список всех планет, с указанием характеристик.
+При клике на карточку/кнопку с планетой, должна быть показана страница с информацией о планете и выведен список всех «обитающих» там персонажей с их характеристиками. Также на странице должен быть фильтр по полу персонажа, по умолчанию отображаются все.
+Верстка и оформление страниц остается на ваше усмотрение.
+При реализации задания необходимо использовать Angular
+https://swapi.dev/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Реализованные функции:
 
-## Running unit tests
+1) Вывод всех планет
+2) Переход на страницу каждой планеты
+3) Пагинация
+4) Фильтр жителей
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Как запустить
 
-## Running end-to-end tests
+Для запуска приложения вам понадобится пакетный менеджер npm
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Для установки пакетов используемых в приложении используйте команду:
 
-## Further help
+`npm install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Для запуска приложения используйте команду:
+
+`npm start`
+

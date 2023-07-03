@@ -1,0 +1,43 @@
+<div *ngIf = 'planet' class="planet">
+  <div>
+    Planet: {{planet.name}}
+  </div>
+  <div>
+    Climate: {{planet.climate}}
+  </div>
+  <div>
+    Gravity: {{planet.gravity}}
+  </div>
+  <div>
+    Territory: {{planet.terrain}}
+  </div>
+  <div>
+    Was created: {{planet.created.slice(0, 10)}}
+  </div>
+  <div class='people'>
+    People:
+    <button (click)="filterFemale = true; filterMale = true" class="buttonFilter">All</button>
+    <button (click)="filterMale = true; filterFemale = false" class="buttonFilter">Male</button>
+    <button (click)="filterMale = false; filterFemale = true" class="buttonFilter">Female</button>
+    <div *ngFor='let people of allPeople; let i = index'>
+      <div *ngIf=filterMale&&filterFemale&&people>{{allPeople[i].name}}</div>
+    </div>
+    <div *ngIf='!filterMale&&people'>
+      <div *ngFor='let people of allPeople; let i = index'>
+        <div *ngIf="allPeople[i].gender == 'male'">
+          {{allPeople[i].name}}
+        </div>
+      </div>
+    </div>
+    <div *ngIf='!filterFemale&&people'>
+      <div *ngFor='let people of allPeople; let i = index'>
+        <div *ngIf="allPeople[i].gender == 'female'">
+          {{allPeople[i].name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf = '!planet || isLoading' class="planet">
+  <img src = './assets/preloader.svg' alt="">
+</div>
